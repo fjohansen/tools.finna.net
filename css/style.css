@@ -17,6 +17,19 @@ html {
   line-height: 1.4;
 }
 
+.exch_date {
+  font-size: 14px;
+
+}
+.exch_rate {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.exch_change {
+  margin-top: 5px;
+  font-size: 12px;
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
