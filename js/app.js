@@ -25,15 +25,19 @@ class ExchangeRatesWorker {
    * @param symbol
    */
   showResults(data, symbol) {
-    const last_item = data[data.length - 1];
-    const previous_item = data[data.length - 2];
+    let last_item = data[data.length - 1];
+    let previous_item = data[data.length - 2];
+    const first_item = data[0];
+    moment.locale('en-gb');
+    last_item.date = new moment(last_item.date).format('<b>dddd</b>, D MMMM YYYY');
+    previous_item.date = new moment(previous_item.date).format('dddd, D MMMM YYYY');
 
     const trend = this.createTrendText(last_item, previous_item);
     if (last_item) {
       $(`#${symbol}_value`).html('NOK ' + last_item.rate );
       // $(`#${symbol}_value`).html(`NOK ${last_item.rate} (${previous_item.rate})`);
       // $(`#${symbol}_value`).html(`NOK ${last_item.rate}`);
-      $(`#${symbol}_date`).html(`Exchange date: ${last_item.date}`);
+      $(`#${symbol}_date`).html(`${last_item.date}`);
       $(`#${symbol}_trend_text`).html(trend);
     }
   }

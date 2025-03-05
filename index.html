@@ -26,50 +26,26 @@
   <!-- UIkit JS -->
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.0/dist/js/uikit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.0/dist/js/uikit-icons.min.js"></script>
+  <script src="/js/vendor/moment/moment.js"></script>
 </head>
 
 <body>
-<div class="uk-container uk-container-medium">
+<div class="uk-container uk-container-mediums">
   <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
-      <h4>&nbsp; NOK - exchange notifications</h4>
+<!--      <img src="img/logo/48x48.png">-->
+      <h4>FT</h4>
       <ul class="uk-navbar-nav">
-        <li class="uk-active"><a href=""></a></li>
+        <li class="uk-active"><a href="./exch/">Exchange rates</a></li>
         <li class="uk-parent"><a href=""></a></li>
         <li><a href=""></a></li>
       </ul>
     </div>
   </nav>
   <div class="uk-margin"></div>
-  <!-- Add your site or application content here -->
-  <div class="uk-text-center" uk-grid>
-    <div class="uk-width-1-3">
-      <div class="uk-card uk-card-default uk-card-body">
-        <h2>&euro;</h2>
-        <div class="exch_date" id="EUR_date">Date: </div>
-        <div class="uk-margin"></div>
-        <div class="trend-up exch_rate" id="EUR_value"><div uk-spinner></div></div>
-        <div class="trend-up exch_change" id="EUR_trend_text"></div>
-      </div>
-    </div>
-    <div class="uk-width-1-3">
-      <div class="uk-card uk-card-default uk-card-body">
-        <h2>&dollar;</h2>
-        <div class="exch_date" id="USD_date">Date: </div>
-        <div class="uk-margin"></div>
-        <div class="trend-up exch_rate" id="USD_value"><div uk-spinner></div></div>
-        <div class="trend-up exch_change" id="USD_trend_text"></div>
-      </div>
-    </div>
-    <div class="uk-width-1-3">
-      <div class="uk-card uk-card-default uk-card-body">
-        <h2>&pound;</h2>
-        <div class="exch_date" id="GBP_date">Date: </div>
-        <div class="uk-margin"></div>
-        <div class="trend-up exch_rate" id="GBP_value"><div uk-spinner></div></div>
-        <div class="trend-up exch_change" id="GBP_trend_text"></div>
-      </div>
-    </div>
+
+  <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+
   </div>
   <div class="uk-position-bottom">
     <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" uk-sticky="position: bottom; end: !.uk-height-large">

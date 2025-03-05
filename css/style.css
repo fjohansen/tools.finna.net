@@ -258,3 +258,6 @@ textarea {
   }
 }
 
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background: #ffffff!important;
+}

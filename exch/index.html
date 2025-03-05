@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>finna-tools</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.0/dist/css/uikit.min.css"/>
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.0/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.0/dist/js/uikit-icons.min.js"></script>
+  <script src="/js/vendor/moment/moment.js"></script>
+</head>
+
+<body>
+<div class="uk-container uk-container-mediums">
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+      <img src="/img/logo/48x48.png">
+      <h4>&nbsp; NOK - exchange notifications</h4>
+      <ul class="uk-navbar-nav">
+        <li class="uk-active"><a href=""></a></li>
+        <li class="uk-parent"><a href=""></a></li>
+        <li><a href=""></a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="uk-margin"></div>
+
+  <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+    <div id="EUR">
+      <div class="uk-card uk-card-default uk-card-body">
+        <div class="uk-card-header">
+          <div class="uk-card-badge uk-label">&euro; - EUR</div>
+          <div class="uk-width-expand">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+              <p class="uk-text uk-margin-remove-top" id="EUR_date">
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card-body">
+          <div class="trend-up exch_rate" id="EUR_value">
+            <div uk-spinner></div>
+          </div>
+          <div class="trend-up exch_change" id="EUR_trend_text"></div>
+        </div>
+        <div class="uk-card-footer">
+          <a href="#" class="uk-button uk-button-text">History</a>
+        </div>
+      </div>
+    </div>
+    <div id="GBP">
+      <div class="uk-card uk-card-default uk-card-body">
+        <div class="uk-card-header">
+          <div class="uk-card-badge uk-label">&pound; - GBP</div>
+          <div class="uk-width-expand">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+              <p class="uk-text uk-margin-remove-top" id="GBP_date">
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card-body">
+          <div class="trend-up exch_rate" id="GBP_value">
+            <div uk-spinner></div>
+          </div>
+          <div class="trend-up exch_change" id="GBP_trend_text"></div>
+        </div>
+        <div class="uk-card-footer">
+          <a href="#" class="uk-button uk-button-text">History</a>
+        </div>
+      </div>
+    </div>
+    <div id="USD">
+      <div class="uk-card uk-card-default uk-card-body">
+        <div class="uk-card-header">
+          <div class="uk-card-badge uk-label">&dollar; - USD</div>
+          <div class="uk-width-expand">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+              <p class="uk-text uk-margin-remove-top" id="USD_date">
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card-body">
+          <div class="trend-up exch_rate" id="USD_value">
+            <div uk-spinner></div>
+          </div>
+          <div class="trend-up exch_change" id="USD_trend_text"></div>
+        </div>
+        <div class="uk-card-footer">
+          <a href="#" class="uk-button uk-button-text">History</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="uk-position-bottom">
+    <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" uk-sticky="position: bottom; end: !.uk-height-large">
+      <div class="disclaimer uk-text uk-text-small">
+        &copy; 2025 - finn
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../js/app.js"></script>
+
+</body>
+
+</html>
