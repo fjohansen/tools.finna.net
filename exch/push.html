@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Finn-tools - Exchange</title>
   <link rel="stylesheet" href="/css/style.css">
-  <meta name="page" content="exchange">
+  <meta name="page" content="push">
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -34,10 +34,10 @@
 <div class="uk-container uk-container-mediums">
   <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
-      <a href="../">
+      <a href="./">
       <img src="/img/logo/finns_euro.png" width="96" height="96">
       </a>
-      <h4>&nbsp; NOK - exchange notifications</h4>
+      <h4>&nbsp; NOK - Push notifications setup</h4>
       <ul class="uk-navbar-nav">
         <li class="uk-active"><a href=""></a></li>
         <li class="uk-parent"><a href=""></a></li>
@@ -47,7 +47,7 @@
   </nav>
   <div class="uk-margin"></div>
 
-  <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+  <div class="uk-child-width-1-1@m uk-grid-small uk-grid-match" uk-grid>
     <div id="EUR">
       <div class="uk-card uk-card-default uk-card-body">
         <div class="uk-card-header">
@@ -56,66 +56,42 @@
             <div class="uk-grid-small uk-flex-middle" uk-grid>
               <p class="uk-text uk-margin-remove-top" id="EUR_date">
               </p>
+              <h3>How to setup Push notifications</h3>
             </div>
           </div>
         </div>
         <div class="uk-card-body">
-          <div class="trend-up exch_rate" id="EUR_value">
-            <div uk-spinner></div>
+          <div class="" id="EUR_value">
+
+            <div>
+              <h4>Follow these steps to get notifications</h4>
+              <p class="uk-text uk-text-small uk-text-muted">If you already have Pushover installed and configured, just press the Subscribe button below.</p>
+              <ul class="uk-list uk-list-decimal uk-list-disc uk-list-emphasis">
+                <li>Download and install
+                  <a href="https://apps.apple.com/us/app/pushover-notifications/id506088175?ls=1" target="_blank" >Pushover</a>
+                  from App Store.
+                </li>
+                <li>
+                  Open the app and press Create Account.
+                </li>
+                <li>Enter your email and create a password. Then press Create Account.</li>
+                <li>Give your device a name (ex: 'Johns iPhone') and press Register Device.</li>
+                <li>Press the Subscribe button below to subscribe to push notifications from Finns Euro. </li>
+              </ul>
+            </div>
           </div>
           <div class="trend-up exch_change" id="EUR_trend_text"></div>
         </div>
-        <div class="uk-card-footer">
-          <a href="#" class="uk-button uk-button-text uk-align-left coming_soon">History</a>
-          <a href="./push.html" class="uk-button uk-button-text uk-align-right">Get push</a>
-        </div>
-      </div>
-    </div>
-    <div id="GBP">
-      <div class="uk-card uk-card-default uk-card-body">
-        <div class="uk-card-header">
-          <div class="uk-card-badge uk-label">&pound; - GBP</div>
-          <div class="uk-width-expand">
-            <div class="uk-grid-small uk-flex-middle" uk-grid>
-              <p class="uk-text uk-margin-remove-top" id="GBP_date">
-              </p>
-            </div>
+        <div class="uk-card-footer " >
+          <div class="uk-width-1-3@m">
+          <a href="https://pushover.net/subscribe/FinnEuro-h9y7i9uzzzbum3y" target="_blank" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Subscribe</a>
           </div>
-        </div>
-        <div class="uk-card-body">
-          <div class="trend-up exch_rate" id="GBP_value">
-            <div uk-spinner></div>
-          </div>
-          <div class="trend-up exch_change" id="GBP_trend_text"></div>
-        </div>
-        <div class="uk-card-footer">
-          <a href="#" class="uk-button uk-button-text coming_soon">History</a>
-        </div>
-      </div>
-    </div>
-    <div id="USD">
-      <div class="uk-card uk-card-default uk-card-body">
-        <div class="uk-card-header">
-          <div class="uk-card-badge uk-label">&dollar; - USD</div>
-          <div class="uk-width-expand">
-            <div class="uk-grid-small uk-flex-middle" uk-grid>
-              <p class="uk-text uk-margin-remove-top" id="USD_date">
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="uk-card-body">
-          <div class="trend-up exch_rate" id="USD_value">
-            <div uk-spinner></div>
-          </div>
-          <div class="trend-up exch_change" id="USD_trend_text"></div>
-        </div>
-        <div class="uk-card-footer">
-          <a href="#" class="uk-button uk-button-text coming_soon">History</a>
+<!--          <a href="./push.html" class="uk-button uk-button-text uk-align-right">get push</a>-->
         </div>
       </div>
     </div>
   </div>
+
   <div class="uk-position-bottom">
     <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" uk-sticky="position: bottom; end: !.uk-height-large">
       <div class="disclaimer uk-text uk-text-small">
@@ -125,6 +101,7 @@
   </div>
 </div>
 <script src="../js/app.js"></script>
+
 
 </body>
 
