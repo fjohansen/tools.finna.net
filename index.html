@@ -4,8 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>finna-tools</title>
+  <title>Finn-tools</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="page" content="front">
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -27,24 +28,108 @@
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.0/dist/js/uikit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.0/dist/js/uikit-icons.min.js"></script>
   <script src="/js/vendor/moment/moment.js"></script>
-  <meta http-equiv="Refresh" content="5; URL=/exch/" />
+<!--  <meta http-equiv="Refresh" content="5; URL=/exch/" />-->
 </head>
 
 <body>
 <div class="uk-container uk-container-mediums">
   <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
-<!--      <img src="img/logo/48x48.png">-->
-      <h4>FT</h4>
-      <ul class="uk-navbar-nav">
-        <li class="uk-active"><a href="./exch/">Exchange rates</a></li>
-        <li class="uk-parent"><a href=""></a></li>
-        <li><a href=""></a></li>
-      </ul>
+      <img src="img/logo/finn_logo_tools.png" width="96">
+      <h4>A collection of useful tools <span class="uk-text-muted"> by finna.net</span></h4>
+<!--      <ul class="uk-navbar-nav">-->
+<!--        <li class="uk-active"><a href="./exch/">Exchange rates</a></li>-->
+<!--        <li class="uk-parent"><a href=""></a></li>-->
+<!--        <li><a href=""></a></li>-->
+<!--      </ul>-->
     </div>
   </nav>
   <div class="uk-margin"></div>
+  <hr>
+  <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+    <div id="EUR">
+      <div class="uk-card uk-card-default uk-card-body">
+        <div class="uk-card-header">
+          <div class="uk-card-badge uk-label">Most popular</div>
+          <div class="uk-width-expand">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+              <p class="uk-text uk-margin-remove-top" id="EUR_date">
+                Today's EUR/NOK
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card-body">
+          <div class="trend-up exch_rate" id="EUR_value">
+            <h5>How much is one Euro in NOK?</h5>
 
+          </div>
+          <div class="trend-up exch_change" id="EUR_trend_text">
+            <p>Is it trending UP or DOWN? Find out here. </p>
+          </div>
+        </div>
+        <div class="uk-card-footer uk-text-center">
+<!--          <button class="uk-button uk-button-default"><a href="./exch">Check it out</a></button>-->
+          <a href="./exch/" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Check it out</a>
+        </div>
+      </div>
+    </div>
+    <div id="ENERGY">
+      <div class="uk-card uk-card-default uk-card-body">
+        <div class="uk-card-header">
+          <div class="uk-card-badge uk-label">Runner up</div>
+          <div class="uk-width-expand">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+              <p class="uk-text uk-margin-remove-top" id="energy_date">
+                Today's Energy rates
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card-body">
+          <div class="trend-up exch_rate" id="energy_value">
+            <h5>What's the price of energy today?</h5>
+
+          </div>
+          <div class="trend-up exch_change" id="energy_trend_text">
+            <p>When is the best time to charge my EV? </p>
+          </div>
+        </div>
+        <div class="uk-card-footer uk-text-center">
+          <!--          <button class="uk-button uk-button-default"><a href="./exch">Check it out</a></button>-->
+          <a href="./energy/" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Check it out</a>
+        </div>
+      </div>
+    </div>
+    <div id="Next">
+      <div class="uk-card uk-card-default uk-card-body">
+        <div class="uk-card-header">
+          <div class="uk-card-badge uk-label">Ask me</div>
+          <div class="uk-width-expand">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+              <p class="uk-text uk-margin-remove-top" id="next_date">
+                Your next favourite?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card-body">
+          <div class="trend-up exch_rate" id="next_value">
+            <h5>If it's out there, I can probably show it.</h5>
+
+          </div>
+          <div class="trend-up exch_change" id="next_text">
+            <p>Let me know if you have an idea.</p>
+          </div>
+        </div>
+        <div class="uk-card-footer uk-text-center">
+          <!--          <button class="uk-button uk-button-default"><a href="./exch">Check it out</a></button>-->
+          <a href="#modal-contact" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" uk-toggle>Tell me</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
   <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
 
   </div>
@@ -53,6 +138,21 @@
       <div class="disclaimer uk-text uk-text-small">
         &copy; 2025 - finn
       </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-contact" uk-modal>
+  <div class="uk-modal-dialog">
+    <button class="uk-modal-close-default" type="button" uk-close></button>
+    <div class="uk-modal-header">
+      <h2 class="uk-modal-title">Tell me about it</h2>
+    </div>
+    <div class="uk-modal-body">
+      <p>If you do have an idea, just send me an <a href="mailto:finna@me.com?subject=Idea for tools.finna.net">email</a>. </p>
+    </div>
+    <div class="uk-modal-footer uk-text-right">
+      <button class="uk-button uk-button-primary uk-modal-close" type="button">OK</button>
     </div>
   </div>
 </div>
