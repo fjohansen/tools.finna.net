@@ -2,8 +2,12 @@ let $ = require("jquery");
 
 
 $(document).ready(async function () {
-  const worker = new ExchangeRatesWorker();
-  await worker.start();
+  const page = $("[name='page']").attr("content");
+  console.log(`starting up in page: ${page}`);
+  if (page === 'exchange') {
+    const worker = new ExchangeRatesWorker();
+    await worker.start();
+  }
 });
 
 class ExchangeRatesWorker {
@@ -46,13 +50,21 @@ class ExchangeRatesWorker {
     const now = parseFloat(item.rate);
     const then = parseFloat(prev_item.rate);
 
+    // let change = parseFloat(((now-then)/then * 100).toFixed(2));
     let change = ((now-then)/then * 100).toFixed(2);
-
-    if (parseFloat(change) > 0) {
-      return `UP ${change}% since ${prev_item.date}`;
-    } else {
-      return `DOWN ${change}% since ${prev_item.date}`;
+    let text;
+    switch (Math.sign(parseFloat(change))) {
+      case 1:
+        text = `UP ${change}% since ${prev_item.date}`;
+        break;
+      case -1:
+        text = `DOWN ${change}% since ${prev_item.date}`;
+        break;
+      default:
+        text = `UNCHANGED ${change}% since ${prev_item.date}`;
     }
+
+    return text;
   }
 
   async parseResult(result) {
