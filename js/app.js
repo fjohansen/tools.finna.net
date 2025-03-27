@@ -8,6 +8,9 @@ $(document).ready(async function () {
     const worker = new ExchangeRatesWorker();
     await worker.start();
   }
+  $(".coming_soon").on('click', function () {
+    UIkit.modal.alert('This feature is coming soon!');
+  });
 });
 
 class ExchangeRatesWorker {
