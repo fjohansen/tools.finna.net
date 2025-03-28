@@ -30,6 +30,10 @@ html {
   margin-top: 5px;
   font-size: 12px;
 }
+
+.energy_price {
+  font-size: 24px;
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
